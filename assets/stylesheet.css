@@ -1,4 +1,4 @@
-body {
+.bg-img {
     background-image: url("WebsiteBackground.jpg");
     background-size: auto;
     background-position: center center;
@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
+    height: 100vh;
 }
 
 header {
@@ -38,3 +39,13 @@ header li a {
     font-weight: bolder;
 }
 
+#title {
+    margin-top: 200px;
+    text-align: center;
+    width: 100%;
+    font-size: 157px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: #e6c2c2;
+}
