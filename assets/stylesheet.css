@@ -1,6 +1,11 @@
 body {
     background-image: url("WebsiteBackground.jpg");
-    background-size: 1400px;
+    background-size: auto;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
 }
 
 header {
@@ -12,6 +17,7 @@ header {
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: left;
 }
   
 header * {
@@ -19,7 +25,7 @@ header * {
 }
   
 header li {
-    margin: 40px
+    margin: 20px
 }
   
 header li a {
@@ -28,6 +34,7 @@ header li a {
 }
   
 .navbar:hover {
-    color: greenyellow;
+    color: red;
+    font-weight: bolder;
 }
 
