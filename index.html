@@ -83,6 +83,8 @@
         </div>
         
         <div class="button-containerGS">
+            <button id="replaceContentButton" class="buttonGS is-large">Get Started</button>
+        </div>   
             <button class="buttonGS is-large">Get Started</button>
     
             <section class="about">
@@ -91,7 +93,14 @@
                     Sometimes our pantries run a bit bare and the culinary journey that awaits has to wait for another day for the pantries to be restocked. If we find ourselves in this scenario we do not have to settle for a boring meal. We are here for you, there is a world of restaurants we can explore. These previously blazed trails can provide a delightful experience.
                 </p>
             </section>
-        
+  
+        <script>
+            $(document).ready(function() {
+              $("#replaceContentButton").click(function() {
+                $("bg-img").html("<h2>New Content</h2><p>This is the new content of the page.</p>");
+              });
+            });
+          </script>
 
     <script src="assets/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/tZ2T9xTso6UE5Z/zsS9FfDg25uZP4+Es2T5FA=" crossorigin="anonymous"></script>
