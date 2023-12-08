@@ -70,3 +70,21 @@ header li a {
     font-size: 26px;
     display: flex;
 }
+
+.about {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+#about-1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border: #948989b2;
+    background-color:#ffffff88;
+    width: 600px;
+    
+}
