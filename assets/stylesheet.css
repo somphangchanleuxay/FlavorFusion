@@ -1,8 +1,7 @@
 .bg-img {
-    background-image: url("WebsiteBackground.jpg");
+    background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
     background-size: auto;
     background-position: center center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
@@ -40,7 +39,6 @@ header li a {
 }
 
 #title {
-    margin-top: 200px;
     text-align: center;
     width: 100%;
     font-size: 157px;
@@ -48,4 +46,14 @@ header li a {
     flex-wrap: nowrap;
     justify-content: center;
     color: #e6c2c2;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.navbar {
+    width: 100%;
+
+}
+
+#buttonGS {
+  
 }
