@@ -1,4 +1,5 @@
 .bg-img {
+    font-family: font-family: 'Bebas Neue', sans-serif;
     background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
     background-size: auto;
     background-position: center center;
@@ -39,6 +40,7 @@ header li a {
 }
 
 #title {
+    font-family: 'Bebas Neue', sans-serif; 
     text-align: center;
     width: 100%;
     font-size: 157px;
@@ -46,7 +48,7 @@ header li a {
     flex-wrap: nowrap;
     justify-content: center;
     color: #e6c2c2;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -3px -3px 0 #000000, 3px -3px 0 #ff5454, -3px 3px 0 #ffffff, 3px 3px 0 #ffffff;
 }
 
 .navbar {
