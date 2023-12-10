@@ -1,12 +1,10 @@
 .bg-img {
-    font-family: font-family: 'Bebas Neue', sans-serif;
+    font-family:'Bebas Neue', sans-serif;
     background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
-    background-size: auto;
     background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #464646;
-    height: 100vh;
 }
 
 header {
@@ -73,6 +71,7 @@ header li a {
 
 .about {
     align-content: center;
+    color: black;
     display: flex;
     justify-content: center;
     margin-top: 5px;
