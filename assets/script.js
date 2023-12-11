@@ -4,3 +4,5 @@ $(document).ready(function() {
       ("<h2>New Content</h2><p>This is the new content of the 'about' section.</p>");
     });
   });
+
+  
