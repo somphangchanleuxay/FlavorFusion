@@ -1,10 +1,18 @@
 .bg-img {
+<<<<<<< HEAD
     font-family:'Bebas Neue', sans-serif;
+=======
+    font-family: 'Bebas Neue', sans-serif;
+>>>>>>> 997e6e73d0eec29d8cdc92c7bc40fab785da7092
     background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
+=======
+    background-attachment: fixed;
+>>>>>>> 997e6e73d0eec29d8cdc92c7bc40fab785da7092
 }
 
 header {
