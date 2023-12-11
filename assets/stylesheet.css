@@ -86,3 +86,39 @@ header li a {
     width: 600px;
     
 }
+
+.pantry {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border: #948989b2;
+    background-color:#ffffff88;
+    width: 600px;
+    align-content: center;
+    justify-content: center;
+    margin: 3rem auto;
+    max-width: 90vw;
+  }
+  
+  ul {
+    margin: 3rem auto;
+    font-size: 1.75rem;
+  }
+  
+  ul li {
+    margin: 1.2rem 0;
+  }
+
+  .addButton {
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttonAdd {
+    justify-content: center;
+    width: 300px;
+    font-size: 26px;
+    display: flex;
+}
