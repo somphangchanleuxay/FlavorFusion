@@ -122,3 +122,62 @@ header li a {
     font-size: 26px;
     display: flex;
 }
+
+.columns {
+    display: flex;
+    background-color: #000000c1;
+    margin-top: 30px;
+}
+
+.column {
+    color: aliceblue;
+    text-align: center;
+    border-color: #ffffff;
+
+}   
+
+.contactme {
+    justify-content: center;
+}
+
+.BottomNavbarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.linksContainer {
+    background-color: #00000000;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 458px;
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+}
+
+.link {
+    background-color: #e6c2c200;
+    padding: 40px;
+    font-size: 20px;
+}
+
+.AllRightsReservedContainer {
+
+}
+
+
+.TextAreaARR {
+    width: 100%;
+    text-align: center;
+    background-color: #00000040;
+    color: beige;
+    display: flex;
+    height: 29px;
+    align-items: flex-end;
+    position: fixed;
+    justify-content: center;
+}
+
