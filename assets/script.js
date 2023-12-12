@@ -6,25 +6,25 @@ $(document).ready(function() {
   });
 
 
-function getApi (){
+// function getApi (){
 
-var requestUrl = 'https://www.themealdb.com/api/json/v2/9973533/filter.php?i=chicken_breast,garlic,salt';
+// var requestUrl = 'https://www.themealdb.com/api/json/v2/9973533/filter.php?i=chicken_breast,garlic,salt';
   
-fetch(requestUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data)
-     })
-}
+// fetch(requestUrl)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data)
+//      })
+// }
 
-const options = {method: 'GET', headers: {accept: 'application/json'}};
+// const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-fetch('https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err))
+// fetch('https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err))
 
 // The following items are for the pantry form data
 
@@ -32,12 +32,10 @@ var pantryFormEl = $('#pantry-form');
 var pantryListEl = $('#pantry-list');
 var pantryClListEl = $('input[name="pantry-input"]');
 
-
 function handleFormSubmit(event) {
   event.preventDefault();
-
   
-  console.log('Pantry Item:', pantryClListEl.val());
+  console.log(pantryClListEl.val());
 
   var pantryItem = $('input[name="pantry-input"]').val();
   if (!pantryItem) {
@@ -51,3 +49,26 @@ function handleFormSubmit(event) {
 }
 
 pantryFormEl.on('submit', handleFormSubmit);
+
+
+
+// **********************
+function ingredientSearch() {
+
+const inputArray = [];
+
+// Get the input elements
+$(pantryListEl).children().each(function(){
+  // Print the array to the console
+  inputArray.push($(this).text());
+  console.log(inputArray);
+});
+
+}
+
+ingredientSearch();
+
+  $("#searchButton").click(function(){
+    ingredientSearch ();
+    console.log(ingredientSearch);
+  });
