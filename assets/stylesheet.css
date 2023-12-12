@@ -1,18 +1,10 @@
-.bg-img {
-<<<<<<< HEAD
+*.bg-img {
     font-family:'Bebas Neue', sans-serif;
-=======
-    font-family: 'Bebas Neue', sans-serif;
->>>>>>> 997e6e73d0eec29d8cdc92c7bc40fab785da7092
     background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-<<<<<<< HEAD
-=======
-    background-attachment: fixed;
->>>>>>> 997e6e73d0eec29d8cdc92c7bc40fab785da7092
 }
 
 header {
@@ -27,23 +19,6 @@ header {
     justify-content: left;
 }
   
-header * {
-    display: inline;
-}
-  
-header li {
-    margin: 20px
-}
-  
-header li a {
-    color: black;
-    text-decoration: none;
-}
-  
-.navbar:hover {
-    color: red;
-    font-weight: bolder;
-}
 
 #title {
     font-family: 'Bebas Neue', sans-serif; 
@@ -70,12 +45,6 @@ header li a {
     flex-wrap: wrap;
 }
 
-.buttonGS {
-    justify-content: center;
-    width: 300px;
-    font-size: 26px;
-    display: flex;
-}
 
 .about {
     align-content: center;
@@ -103,33 +72,28 @@ header li a {
     background-color:#ffffff88;
     width: 600px;
     align-content: center;
+    text-align: center;
     justify-content: center;
-    margin: 3rem auto;
+    margin: 2rem auto;
+    padding-bottom: 2px;
     max-width: 90vw;
   }
   
-  ul {
+ul {
     margin: 3rem auto;
     font-size: 1.75rem;
   }
   
-  ul li {
+ul li {
     margin: 1.2rem 0;
   }
 
-  .addButton {
+.addButton {
     width: 100%;
     align-content: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.buttonAdd {
-    justify-content: center;
-    width: 300px;
-    font-size: 26px;
-    display: flex;
 }
 
 .columns {
@@ -155,7 +119,7 @@ header li a {
     justify-content: center;
 }
 
-.linksContainer {
+*footer{
     background-color: #00000000;
     width: 100%;
     justify-content: center;
@@ -167,18 +131,15 @@ header li a {
     position: fixed;
 }
 
-.link {
+*.link {
     background-color: #e6c2c200;
     padding: 40px;
     font-size: 20px;
-}
-
-.AllRightsReservedContainer {
-
+    width: 100%;
 }
 
 
-.TextAreaARR {
+*.TextAreaARR {
     width: 100%;
     text-align: center;
     background-color: #00000040;
@@ -186,7 +147,6 @@ header li a {
     display: flex;
     height: 29px;
     align-items: flex-end;
-    position: fixed;
     justify-content: center;
 }
 
