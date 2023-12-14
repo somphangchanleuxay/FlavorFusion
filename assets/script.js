@@ -67,7 +67,6 @@ $("#searchButton").click(function(){
 
 
 
-
 // const options = {method: 'GET', headers: {accept: 'application/json'}};
 
 // fetch('https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20', options)
