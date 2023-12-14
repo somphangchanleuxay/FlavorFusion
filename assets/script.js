@@ -8,6 +8,7 @@ $(document).ready(function() {
   var pantryFormEl = $('#pantry-form');
   var pantryListEl = $('#pantry-list');
   var pantryClListEl = $('input[name="pantry-input"]');
+  var mealdbIngredients;
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -25,23 +26,6 @@ function handleFormSubmit(event) {
 
 pantryFormEl.on('submit', handleFormSubmit);
 
-
-function ingredientSearch() {
-  
-  const inputArray = [];
-  
-  // Get the input elements
-  $(pantryListEl).children().each(function(){
-    // Print the array to the console
-    inputArray.push($(this).text().trim());
-    console.log(inputArray);
-  });
-  
-  var mealdbIngredients = inputArray.toString()
-  console.log(mealdbIngredients);
-
-  var searchButton = document.getElementById('searchButton')
-
 function getmealdb (){
 
   var requestUrl = 'https://www.themealdb.com/api/json/v2/9973533/filter.php?i=' + mealdbIngredients;
@@ -55,14 +39,27 @@ function getmealdb (){
        })
   }
 
-  searchButton.addEventListener('click', getmealdb);
+function ingredientSearch() {
   
+  const inputArray = [];
+  
+  // Get the input elements
+  $(pantryListEl).children().each(function(){
+    // Print the array to the console
+    inputArray.push($(this).text().trim());
+    console.log(inputArray);
+  });
+  
+  mealdbIngredients = inputArray.toString()
+  console.log(mealdbIngredients);
+
 }
 
 ingredientSearch();
 
 $("#searchButton").click(function(){
   ingredientSearch ();
+  getmealdb ();
 });
 
 
