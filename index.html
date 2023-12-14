@@ -14,11 +14,12 @@
 <body class="bg-img">
     <header>
         <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+
             <div class="navbar-brand">
               <a class="navbar-item" href="index.html">
                 <img src="assets/Images/HomeIcon.png" width="50" height="28">
               </a>
-          
+        
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -80,21 +81,21 @@
         </section>
         
         <div class="button-containerGS">
-          <button id="replaceContentButton" class="buttonGS is-large">Get Started</button>
+          <button id="replaceContentButton" class="button is-large is-link is-rounded is-responsive">Get Started</button>
         </div>
 
 
         <section class="pantry" id="pantryItems">
-          <h1>Pantry List</h1>
-          <hr />
-      
+                    
           <h2>Add Pantry and Refrigerator Items</h2>
           <form id="pantry-form">
             <input type="text" class="pantry1" id="pantry-inputs" name="pantry-input" placeholder="Enter Pantry Items" />
-            <button id="addButton" class="buttonAdd">Add</button>
-            <button id="searchButton" class="buttonAdd">Search</button>
+            <button id="addButton" class="button is-centered is-success is-responsive">Add</button>
           </form>
-      
+          
+          <button id="searchButton" class="button is-centered is-info is-rounded is-responsive">Search</button>
+          <h1>Pantry List</h1>
+          
           <ul id="pantry-list"></ul>
         </section>
 
