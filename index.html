@@ -1,128 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/stylesheet.css">
-    <title>Flavor Fusion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/stylesheet.css">
+  <title>Flavor Fusion</title>
 </head>
 
 <body class="bg-img">
-    <header>
-        <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      
+  <header>
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
 
-            <div class="navbar-brand">
-              <a href="index.html">
-                <img class="navbar-item" src="assets/Images/HomeIcon.png" width="50" height="28" alt="Flavor Home">
-                </a>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="assets/Images/HomeIcon.png" width="50" height="28">
+        </a>
 
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-        
-              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
-            </div>
-          
-            <div id="navbarBasicExample" class="navbar-menu">
-              <div class="navbar-start">
-                <a href="about.html" class="navbar-item">
-                  About
-                </a>
-    
-                  <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                      About
-                    </a>
-                   
-                    <a class="navbar-item">
-                      Contact
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                      Report an issue
-                    </a>
-                  </div>
-                </div>
-              </div>
-          
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-primary">
-                      <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                      Log in
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        
-          
-          
-        </header>
-        
-        <div>
-            <h1 id ="title">Flavor Fusion</h1>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            About
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
         </div>
-        
-        
-        <section class="about" id="sectionToReplace"> 
-          <p id="about-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are an eclectic group of individuals who bonded over a common interest in enjoying a variety of food flavors. Our goal is to remove the monotony of mealtime. We believe flavors from different cultures and ethnicities can be fused to intrigue the most discerning of palates.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We want to be able to create an inspiring and nutritionally balanced meal that takes us on a flavor journey while blazing trails that have never been trodden using ingredients we currently have in our pantry. 
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sometimes our pantries run a bit bare and the culinary journey that awaits has to wait for another day for the pantries to be restocked. If we find ourselves in this scenario we do not have to settle for a boring meal. We are here for you, there is a world of restaurants we can explore. These previously blazed trails can provide a delightful experience.
-          </p>
-        </section>
-        
-        <div class="button-containerGS">
-          <button id="replaceContentButton" class="button is-large is-link is-rounded is-responsive">Get Started</button>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
         </div>
+      </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <div>
+    <h1 id="title">Flavor Fusion</h1>
+  </div>
 
 
-        <section class="pantry" id="pantryItems">
-                    
-          <h2>Enter Your Primary Ingredient</h2>
-          <form id="pantry-form">
-            <input type="text" class="pantry1" id="pantry-inputs" name="pantry-input" placeholder="Primary Ingredient" />
-            <button id="addButton" class="button is-centered is-success is-responsive">Add</button>
-          </form>
-          
-          <button id="searchButton" class="button is-centered is-info is-rounded is-responsive">Search</button>
-          <h1></h1>
-          
-          <ul id="pantry-list"></ul>
-        </section>
-      <body>
+  <section class="about">
+    <p id="about-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are an eclectic group of individuals who bonded over a common
+      interest in enjoying a variety of food flavors. Our goal is to remove the monotony of mealtime. We believe flavors
+      from different cultures and ethnicities can be fused to intrigue the most discerning of palates.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We want to be able to create an inspiring and nutritionally balanced meal that
+      takes us on a flavor journey while blazing trails that have never been trodden using ingredients we currently have
+      in our pantry.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sometimes our pantries run a bit bare and the culinary journey that awaits has
+      to wait for another day for the pantries to be restocked. If we find ourselves in this scenario we do not have to
+      settle for a boring meal. We are here for you, there is a world of restaurants we can explore. These previously
+      blazed trails can provide a delightful experience.
+    </p>
+</section>
 
-        
-        <!-- Contact Me Form -->
-        
-          
-          <!-- Links to Us -->
+  <section class="pantry" id="pantryItems">
 
-       
-       <div class="BottomNavbarContainer">
-        <div class="linksContainer">
-          <a class="link"  href="url">Home</a>
-          <a class="link"  href="about.html">About</a>
-          <a class="link"  href="url">Services</a>
-          <a class="link"  href="url">Team</a>
-          <a class="link"  href="url">Contact</a>
+    <h2>Add Pantry and Refrigerator Items</h2>
+    <form id="pantry-form">
+      <input type="text" class="pantry1" id="pantry-inputs" name="pantry-input" placeholder="Enter Pantry Items" />
+      <button id="addButton" class="button is-centered is-success is-responsive">Add</button>
+    </form>
 
-          <div class="TextAreaARR">©2023 Flavor Fusion | All Rights Reserved</div>
-        </div>
-       </div>
-          
+    <button id="searchButton" class="button is-centered is-info is-rounded is-responsive">Search</button>
+    <h1>Pantry List</h1>
 
-    <script src="assets/script.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <ul id="pantry-list"></ul>
+  </section>
+
+  <section id="results-container">
+    <h2></h2>
+  </section>
+
+
+  <div class="BottomNavbarContainer">
+    <div class="linksContainer">
+      <a class="link" href="url">Home</a>
+      <a class="link" href="url">About</a>
+      <a class="link" href="url">Services</a>
+      <a class="link" href="url">Team</a>
+      <a class="link" href="url">Contact</a>
+
+      <div class="TextAreaARR">©2023 Flavor Fusion | All Rights Reserved</div>
+    </div>
+  </div>
+
+
+  <script src="assets/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </body>
+
 </html>
