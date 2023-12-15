@@ -24,15 +24,31 @@ header {
   
 
 #title {
-    font-family: 'Bebas Neue', sans-serif; 
+    font-family: 'Macondo', cursive;
     text-align: center;
+    margin-top: 65px;
     width: 100%;
     font-size: 157px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    color: #e6c2c2;
-    text-shadow: -3px -3px 0 #000000, 3px -3px 0 #ff5454, -3px 3px 0 #ffffff, 3px 3px 0 #ffffff;
+    color: #ff9595;
+    text-shadow: -3px -3px 0 #3f0000, 3px -3px 0 #854242, -3px 3px 0 #ffffff, 3px 3px 0 #ffffff;
+}
+
+#navbarBasicExample {
+
+}
+
+
+.navbar-item {
+    align-items: center;
+    display: flex;
+    margin-left: 88px;
+    margin-top: 14px;
+}
+.pineapple {
+    height: 200px;
 }
 
 .navbar {
@@ -41,7 +57,18 @@ header {
 }
 
 .navbar-homebutton {
-    
+        height: auto;
+        max-width: 100%;
+        margin-top: 25px;
+        margin-left: 16px;
+
+}
+
+.navbar-link, a.navbar-item {
+    cursor: pointer;
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 20px;
+    margin-top: 24px;
 }
 
 .about {
@@ -119,12 +146,14 @@ ul li {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 18%;
     align-items: baseline;
     align-content: flex-end;
     flex-wrap: wrap;
-    position: relative;
+    position: sticky;
     bottom: 0;
+    background: black;
+    
 }
 
 *footer{
@@ -144,6 +173,7 @@ ul li {
     padding: 40px;
     font-size: 20px;
     width: 100%;
+    font-family: 'Sawarabi Mincho', serif;
 }
 
 
