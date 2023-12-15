@@ -6,6 +6,8 @@ $(document).ready(function() {
   var pantryListEl = $('#pantry-list');
   var pantryClListEl = $('input[name="pantry-input"]');
   var mealdbIngredients;
+  var resultsContainer;
+  var mealContainer;
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -93,6 +95,7 @@ function ingredientSearch() {
 
 }
 
+
 ingredientSearch();
 
 $("#searchButton").click(function() {
@@ -100,12 +103,41 @@ $("#searchButton").click(function() {
   getmealdb();
 });
 
+$(document).on('click', '.nutrition-button', function () {
+  var mealId = $(this).data('meal-id');
+  fetchNutritionValues(mealId);
+});
+// Assuming resultsContainer and mealContainer are defined somewhere in your code
+mealContainer.find('.nutrition-button').click(function () {
+  var mealId = $(this).data('meal-id');
+  fetchNutritionValues(mealId);
+});
+function fetchNutritionValues(mealId) {
+  // Edamam API endpoint for nutrition analysis
+  var edamamApiUrl = 'https://api.edamam.com/api/nutrition-data';
+  // Replace 'YOUR_APP_ID' and 'YOUR_APP_KEY' with your Edamam API credentials
+  var appId = 'e973437d';
+  var appKey = '37706078baed67cf5db82ed60d0bb905';
+  // Construct the request URL with the necessary parameters
+  var nutritionApiUrl =
+    edamamApiUrl +
+    '?app_id=' +
+    appId +
+    '&app_key=' +
+    appKey +
+    '&ingr=' +
+    encodeURIComponent(mealId);
+  fetch(nutritionApiUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // Handle the nutrition values data from the Edamam API
+      console.log('Nutrition Values:', data);
+    })
+    .catch(function (error) {
+      console.error('Error fetching nutrition values:', error);
+    });
+}
 
-
-// const options = {method: 'GET', headers: {accept: 'application/json'}};
-
-// fetch('https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20', options)
-//   .then(response => response.json())
-//   .then(response => console.log(response))
-//   .catch(err => console.error(err))
 
