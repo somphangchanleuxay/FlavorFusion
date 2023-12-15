@@ -51,12 +51,13 @@ function displayResults(meals) {
 
     // Set the HTML content directly for the container using template literals
     mealContainer.html(`
+      <h1 class="recipe-title">${meal.strMeal}</h1>
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-      <h3>${meal.strMeal}</h3>
-      <h4>Ingredients:</h4>
-      <ul>${getIngredientsList(meal)}</ul>
-      <h4>Instructions:</h4>
-      <p>${meal.strInstructions}</p>
+      <h2 class="font-resultsize">Ingredients:</h2>
+      <ul class="ingredient-mod">${getIngredientsList(meal)}</ul>
+      <h2 class="font-resultsize">Instructions:</h2>
+      <p class="instruction-font">${meal.strInstructions}</p>
+      <button class="nutrition-button" data-meal-id="${meal.idMeal}">Nutritional Values</button>
     `);
 
     // Append the meal container to the results container
