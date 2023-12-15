@@ -1,10 +1,11 @@
-*.bg-img {
+.bg-img {
     font-family:'Bebas Neue', sans-serif;
     background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 header {
@@ -36,15 +37,6 @@ header {
     width: 100%;
 
 }
-
-.button-containerGS {
-    width: 100%;
-    align-content: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 
 .about {
     align-content: center;
@@ -117,6 +109,12 @@ ul li {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 14%;
+    align-items: baseline;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 0;
 }
 
 *footer{
@@ -150,3 +148,14 @@ ul li {
     justify-content: center;
 }
 
+/* Results Container */
+.meal-container {
+    background: #aaa8a8af;
+    color:#ffffff;
+
+}
+
+.mealimg {
+    height: 450px;
+    width: 450px;
+}

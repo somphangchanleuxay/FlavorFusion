@@ -1,8 +1,5 @@
 $(document).ready(function() {
-    $("#replaceContentButton").click(function() {
-      $("#sectionToReplace").html
-      ("<h2>New Content</h2>;<p>This is the new content of the 'about' section.</p>");
-    });
+  
   });
   
   var pantryFormEl = $('#pantry-form');
@@ -28,16 +25,56 @@ pantryFormEl.on('submit', handleFormSubmit);
 
 function getmealdb (){
 
-  var requestUrl = 'https://www.themealdb.com/api/json/v2/9973533/filter.php?i=' + mealdbIngredients;
-    
+  // var requestUrl = 'https://www.themealdb.com/api/json/v2/9973533/filter.php?i=' + mealdbIngredients;
+  var requestUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=' + mealdbIngredients;
+  
   fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data)
-       })
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    displayResults(data.meals);
+  })
+  .catch(function (error) {
+    console.error('Error fetching data from MealDB API:', error);
+  });
+}
+
+function displayResults(meals) {
+  console.log (meals);
+  var resultsContainer = $('#results-container');
+  resultsContainer.empty(); // Clear previous results
+
+  meals.forEach(function (meal) {
+    // Create a container for each meal
+    var mealContainer = $('<div class="meal-container"></div>');
+
+    // Set the HTML content directly for the container using template literals
+    mealContainer.html(`
+      <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+      <h3>${meal.strMeal}</h3>
+      <h4>Ingredients:</h4>
+      <ul>${getIngredientsList(meal)}</ul>
+      <h4>Instructions:</h4>
+      <p>${meal.strInstructions}</p>
+    `);
+
+    // Append the meal container to the results container
+    resultsContainer.append(mealContainer);
+  });
+}
+
+function getIngredientsList(meal) {
+  var ingredientsList = '';
+  for (var i = 1; i <= 20; i++) {
+    var ingredient = meal['strIngredient' + i];
+    var measure = meal['strMeasure' + i];
+    if (ingredient && measure) {
+      ingredientsList += `<li>${measure} ${ingredient}</li>`;
+    }
   }
+  return ingredientsList;
+}
 
 function ingredientSearch() {
   
@@ -57,9 +94,9 @@ function ingredientSearch() {
 
 ingredientSearch();
 
-$("#searchButton").click(function(){
-  ingredientSearch ();
-  getmealdb ();
+$("#searchButton").click(function() {
+  ingredientSearch();
+  getmealdb();
 });
 
 
