@@ -1,5 +1,5 @@
 .bg-img {
-    font-family:'Bebas Neue', sans-serif;
+    font-family: 'Lobster', sans-serif;
     background-image: url("https://wallpapercave.com/wp/wp3105346.jpg");
     background-position: center center;
     background-attachment: fixed;
@@ -44,7 +44,8 @@ header {
 .navbar-item {
     align-items: center;
     display: flex;
-    margin-left: 88px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 14px;
 }
 .pineapple {
@@ -61,14 +62,16 @@ header {
         max-width: 100%;
         margin-top: 25px;
         margin-left: 16px;
+        margin-right: 16px;
 
 }
 
 .navbar-link, a.navbar-item {
     cursor: pointer;
     font-family: 'Sawarabi Mincho', serif;
-    font-size: 20px;
+    font-size: 26px;
     margin-top: 24px;
+    font-family: 'Lobster', sans-serif;
 }
 
 .about {
@@ -171,9 +174,7 @@ ul li {
 *.link {
     background-color: #e6c2c200;
     padding: 40px;
-    font-size: 20px;
-    width: 100%;
-    font-family: 'Sawarabi Mincho', serif;
+    font-size: 28px;
 }
 
 
