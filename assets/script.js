@@ -17,9 +17,14 @@ function handleFormSubmit(event) {
     console.log('No pantry item entered!');
     return;
   }
-  
+
+  // Clear old pantry items before adding a new one
+  pantryListEl.empty();
+
+  // Add the new pantry item
   pantryListEl.append('<li>' + pantryItem + '</li>');
-  
+
+  // Clear the input field
   $('input[name="pantry-input"]').val('');
 }
 

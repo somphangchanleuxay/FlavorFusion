@@ -110,6 +110,19 @@ header {
     padding: 15px;
     border-radius: 8px;
   }
+
+#pantry-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pantry1 {
+    width: 234px;
+    height: 35px;
+    margin-right: 6px;
+}
   
 ul {
     margin: 3rem auto;
