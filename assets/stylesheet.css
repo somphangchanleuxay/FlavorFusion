@@ -34,6 +34,7 @@ header {
     justify-content: center;
     color: #ff9595;
     text-shadow: -3px -3px 0 #3f0000, 3px -3px 0 #854242, -3px 3px 0 #ffffff, 3px 3px 0 #ffffff;
+    top-margin: 10%;
 }
 
 #navbarBasicExample {
