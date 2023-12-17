@@ -1,7 +1,7 @@
 # Flavor Fusion
 
 ## Description
-We are an eclectic group of individuals who bonded over a common interest in enjoying a variety of food flavors. Our goal was to remove the monotony of mealtime by creating a website that would allow users to search any single ingredient in their household, which would create an inspiring and nutritionally balanced meal that takes us on a flavor journey while blazing trails that have never been trodden using ingredients we currently have in our pantry. We believe flavors from different cultures and ethnicities can be fused to intrigue the most discerning of palates for our users.
+We are an eclectic group of individuals who bonded over a common interest in enjoying a variety of food flavors. Our goal was to remove the monotony of mealtime by creating a website that would allow users to search any single ingredient in their household. We took it from here and searched for inspiring and nutritionally balanced meals that takes us on a flavor journey while blazing trails that have never been trodden using ingredients we currently have in our pantry. We believe flavors from different cultures and ethnicities can be fused to intrigue the most discerning of palates for our users.
 Sometimes our pantries run a bit bare and the culinary journey that awaits has to wait for another day for the pantries to be restocked. If we find ourselves in this scenario we do not have to settle for a boring meal. We are here for you, there is a world of restaurants we can explore. These previously blazed trails can provide a delightful experience.
 
 
