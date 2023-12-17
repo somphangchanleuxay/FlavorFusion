@@ -257,3 +257,14 @@ ul li {
 .instruction-font {
     font-size: 18px;
 }
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        background-color: #0a0a0a;
+        color: #fff;
+        display: flex;
+        columns: inherit;
+    }
+    
+}
