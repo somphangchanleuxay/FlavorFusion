@@ -110,6 +110,19 @@ header {
     padding: 15px;
     border-radius: 8px;
   }
+
+#pantry-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pantry1 {
+    width: 234px;
+    height: 35px;
+    margin-right: 6px;
+}
   
 ul {
     margin: 3rem auto;
@@ -243,4 +256,15 @@ ul li {
 
 .instruction-font {
     font-size: 18px;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        background-color: #0a0a0a;
+        color: #fff;
+        display: flex;
+        columns: inherit;
+    }
+    
 }

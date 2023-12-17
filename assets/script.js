@@ -17,9 +17,14 @@ function handleFormSubmit(event) {
     console.log('No pantry item entered!');
     return;
   }
-  
+
+  // Clear old pantry items before adding a new one
+  pantryListEl.empty();
+
+  // Add the new pantry item
   pantryListEl.append('<li>' + pantryItem + '</li>');
-  
+
+  // Clear the input field
   $('input[name="pantry-input"]').val('');
 }
 
@@ -107,11 +112,7 @@ $(document).on('click', '.nutrition-button', function () {
   var mealId = $(this).data('meal-id');
   fetchNutritionValues(mealId);
 });
-// Assuming resultsContainer and mealContainer are defined somewhere in your code
-mealContainer.find('.nutrition-button').click(function () {
-  var mealId = $(this).data('meal-id');
-  fetchNutritionValues(mealId);
-});
+
 function fetchNutritionValues(mealId) {
   // Edamam API endpoint for nutrition analysis
   var edamamApiUrl = 'https://api.edamam.com/api/nutrition-data';
@@ -127,17 +128,46 @@ function fetchNutritionValues(mealId) {
     appKey +
     '&ingr=' +
     encodeURIComponent(mealId);
+
   fetch(nutritionApiUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       // Handle the nutrition values data from the Edamam API
-      console.log('Nutrition Values:', data);
+      displayNutritionValues(data);
     })
     .catch(function (error) {
       console.error('Error fetching nutrition values:', error);
     });
 }
 
+function displayNutritionValues(data) {
+  // Assuming you have a resultsContainer variable
+  var nutritionContainer = $('<div class="nutrition-container"></div>');
+
+  // Check if the data has a 'totalNutrients' property
+  if (data.totalNutrients) {
+    // Add the nutrition information to the container
+    nutritionContainer.html(`
+      <h2 class="font-resultsize">Nutrition Information</h2>
+      <p>Calories: ${data.calories ? data.calories.toFixed(2) : 'N/A'} kcal</p>
+      <p>Protein: ${data.totalNutrients.PROCNT ? data.totalNutrients.PROCNT.quantity.toFixed(2) + 'g' : 'N/A'}</p>
+      <p>Fat: ${data.totalNutrients.FAT ? data.totalNutrients.FAT.quantity.toFixed(2) + 'g' : 'N/A'}</p>
+      <p>Carbohydrates: ${data.totalNutrients.CHOCDF ? data.totalNutrients.CHOCDF.quantity.toFixed(2) + 'g' : 'N/A'}</p>
+      <!-- Add more nutrient information as needed -->
+    `);
+  } else {
+    nutritionContainer.html('<p>Nutrition information not available</p>');
+  }
+
+  // Assuming mealContainer is accessible here
+  var mealContainer = $(document).find('.meal-container');
+  
+  // Check if the nutrition container already exists and remove it
+  mealContainer.find('.nutrition-container').remove();
+  
+  // Append the nutrition container under the nutrient button
+  mealContainer.append(nutritionContainer);
+}
 
