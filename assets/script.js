@@ -142,32 +142,5 @@ function fetchNutritionValues(mealId) {
     });
 }
 
-function displayNutritionValues(data) {
-  // Assuming you have a resultsContainer variable
-  var nutritionContainer = $('<div class="nutrition-container"></div>');
 
-  // Check if the data has a 'totalNutrients' property
-  if (data.totalNutrients) {
-    // Add the nutrition information to the container
-    nutritionContainer.html(`
-      <h2 class="font-resultsize">Nutrition Information</h2>
-      <p>Calories: ${data.calories ? data.calories.toFixed(2) : 'N/A'} kcal</p>
-      <p>Protein: ${data.totalNutrients.PROCNT ? data.totalNutrients.PROCNT.quantity.toFixed(2) + 'g' : 'N/A'}</p>
-      <p>Fat: ${data.totalNutrients.FAT ? data.totalNutrients.FAT.quantity.toFixed(2) + 'g' : 'N/A'}</p>
-      <p>Carbohydrates: ${data.totalNutrients.CHOCDF ? data.totalNutrients.CHOCDF.quantity.toFixed(2) + 'g' : 'N/A'}</p>
-      <!-- Add more nutrient information as needed -->
-    `);
-  } else {
-    nutritionContainer.html('<p>Nutrition information not available</p>');
-  }
-
-  // Assuming mealContainer is accessible here
-  var mealContainer = $(document).find('.meal-container');
-  
-  // Check if the nutrition container already exists and remove it
-  mealContainer.find('.nutrition-container').remove();
-  
-  // Append the nutrition container under the nutrient button
-  mealContainer.append(nutritionContainer);
-}
 
